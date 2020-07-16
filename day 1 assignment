@@ -1,0 +1,142 @@
+In javascript, the console is an object which provides access to the browser debugging console. We can open a console in web browser by using: Ctrl + Shift + K for windows and Command + Option + K for Mac. The console object provides us with several different methods, like :
+
+log()
+error()
+warn()
+clear()
+time() and timeEnd()
+table()
+count()
+group() and groupEnd()
+custom console logs
+
+// console.log() method 
+console.log('abc');  
+console.log(1); 
+console.log(true); 
+console.log(null); 
+console.log(undefined);  
+console.log([1, 2, 3, 4]); // array inside log 
+console.log({a:1, b:2, c:3}); // object inside log 
+
+// console.error() method  
+console.error('This is a simple error');  
+
+// console.warn() method  
+console.warn('This is a warning.');
+
+// console.clear() method  
+console.clear();  
+ASSIGNMENT 1:
+// console.time() and console.timeEnd() method  
+console.time('abc'); 
+ let fun =  function(){ 
+     console.log('fun is running'); 
+ } 
+ let fun2 = function(){ 
+     console.log('fun2 is running..'); 
+ } 
+ fun(); // calling fun(); 
+ fun2(); // calling fun2(); 
+console.timeEnd('abc'); 
+
+// console.table() method 
+console.table({'a':1, 'b':2});
+
+// console.count() method 
+for(let i=0;i<5;i++){ 
+    console.count(i); 
+} 
+
+/ console.group() and console.groupEnd() method 
+console.group('simple'); 
+  console.warn('warning!'); 
+  console.error('error here'); 
+  console.log('vivi vini vici'); 
+console.groupEnd('simple'); 
+console.log('new section');
+
+// Custom Console log example 
+  const spacing = '10px'; 
+  const styles =  
+        `padding: ${spacing}; background-color: white; color: green; font-style:  
+         italic; border: 1px solid black; font-size: 2em;`; 
+  console.log('%cGeeks for Geeks', styles); 
+  
+  ASSIGNMENT 2:
+  
+  Difference between var,let and const:
+  
+  var: The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is “function scoped”.
+
+let: The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are“block scoped”.
+
+const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+“const” cannot be re-assigned to a new value. However it CAN be mutated.
+
+eg for var:
+{
+  var a=10;
+  console.log(a);
+} //block 1
+{
+  a++;
+  console.log(a);
+} //block 2
+/* Since we are using "var a=10", scope of "a" is limited to the function within which it is defined. In this case it is within the global function scope */
+
+eg for let:
+{
+ let a=10;
+ console.log(a);
+} //block 1
+{
+  a++;
+  console.log(a);
+} //block 2
+/* Since we are using "let a=10", scope of "a" is limited to block 1 and "a" is not recognized in block 2 */
+
+eg fpr const:
+{
+ const PI=3.14;
+ console.log(PI);
+} //block 1
+{
+  console.log(PI);
+} //block 2
+/* Since we are using "const PI=3.14", scope of "PI" is limited to block 1 and "PI" is not recognized in block 2 */
+
+ASSIGNMENT 3:
+
+JavaScript primitive data types
+There are five types of primitive data types in JavaScript. They are as follows:
+
+Data Type           	Description
+String        represents sequence of characters e.g. "hello"
+Number	      represents numeric values e.g. 100
+Boolean	      represents boolean value either false or true
+Undefined     represents undefined value
+Null   	      represents null i.e. no value at all
+
+
+
+JavaScript non-primitive data types
+The non-primitive data types are as follows:
+
+Data Type           	Description
+Object	    represents instance through which we can access members
+Array      	represents group of similar values
+RegExp	    represents regular expression
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  

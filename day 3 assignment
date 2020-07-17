@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<body>
+    <script src="scripts/gradeswitch.js"></script>
+</body>
+</html>
+
+GRADE:
+let mark = prompt("Enter your mark:");
+if(mark>=80&&mark<=100){
+console.log("The grade is A and your mark is " +mark );
+}
+else if(mark>=60&&mark<=79){
+    console.log("The grade is B and your mark is " +mark);
+}
+else if(mark>=40&&mark<=59){
+    console.log("The grade is C and your mark is " +mark);
+}
+else{
+    console.log("Sorry! YOU HAVE FAILED IN THIS EXAMINATION. BETTER LUCK NEXT TIME!! and your mark is" +mark);
+}
+
+ODD:
+let num = prompt("Enter a number:");
+console.log(num);
+
+function odd(numb){
+    let result = (numb%2==0) ? 'It is even' : 'It is odd'
+return result;
+}
+
+let res = odd(num);
+console.log(res);
+
+OS:
+let arr= prompt("Enter your os name and version");
+console.log(arr);
+let txtv = arr.split(" ");
+console.log ('The entered OS and version is: ' +txtv);
+
+
+
+
+
+
+
+
+
+
+

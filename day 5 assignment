@@ -1,0 +1,102 @@
+assign5.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scripts/user.js"></script>
+</body>
+</html>
+
+
+oddcube.js
+
+let n = prompt("Enter the array size:");
+let arr = [];
+for (let i = 0; i < n; i++) {
+    var val = 0;
+    val = prompt("Enter the value: ")
+        arr.push(val);
+}
+console.log(arr);
+let odd = arr.filter(el=>el%2!=0);
+let oddSquares = arr.filter(el=>el%2!=0).map(el=>el**3);
+
+console.log(odd);
+console.log(oddSquares);
+
+
+user.js
+
+class User {
+    constructor(name, age,email) {
+      this.name = name;
+      this.age = age;
+      this.email = email;
+      this.luCoins = 0;
+      this.courses = [];
+    }
+  login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+    }
+}
+
+ class Moderator extends User{
+    constructor(name,age,email,role){
+        super(name,age,email);
+        this.role = role;
+    }
+addCoins(){
+        this.luCoins++;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+    }
+   
+   deleteCoins(){
+        this.luCoins--;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+    }
+}
+class Admin extends Moderator{
+   addCourse(user,course){
+       user.courses.push(course);
+       console.log(user);
+   }
+   deleteCourse(user,course){
+       user.courses.pop(course);
+       console.log(user);
+   }
+}
+      
+   
+let user1 = new User('Mr. x',25,'x@gmail.com')
+let user2 = new User('Mr. y',24,'y@gmail.com')
+let mod = new Moderator('Mr. z',24, 'z@gmail.com','Moderator');
+let admin = new Admin('Mr. w',25,'w@gmail.com');
+let users = [user1,user2,mod,admin];
+users.forEach(element => {
+    console.log(element);
+});
+
+
+admin.addCourse(user1,'Javascript');
+admin.addCourse(user1,'Python');
+admin.deleteCourse(user1,'javascript');
+mod.addCoins();
+mod.addCoins();
+console.log(user1.courses);
+console.log(user1.luCoins);
+user1.login();
+user2.login();
+user1.logout();
+console.log(mod.role);

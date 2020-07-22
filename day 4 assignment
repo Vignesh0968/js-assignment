@@ -1,0 +1,205 @@
+ARROW.JS
+
+var hi = (ques, yes, no) => confirm(ques) ? yes() : no();
+var ques = "Do you agree?"
+let yes = () => alert(" You agreed!!");
+let no = () => alert("You  didn't agree!!");
+let res = hi(ques,yes,no);
+console.log(res);
+
+
+ASSIGN4.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>hi everyone!!</h3>
+    <h6>Day 4 Assignment</h6>
+   <!---- <script src="scripts/loop.js"></script>-->
+   <!----<script src="scripts/obj.js"></script>-->
+    <!----<script src="scripts/shopping.js"></script>-->
+    <!----<script src="scripts/calc.js"></script>-->
+   <!---- <script src="scripts/sales.js"></script>-->
+    <!----<script src="scripts/no.js"></script>-->
+<!----<script src="scripts/prime.js"></script>-->
+    <script src="scripts/arrow.js"></script>
+
+</body>
+</html>
+
+CALC.js
+
+do{
+console.log("MENU");
+console.log("1. ADDITION");
+console.log("2. SUBTRACTION");
+console.log("3. MULTIPLICATION");
+console.log("4. DIVISION");
+console.log("5. SQUARE ROOT");
+console.log("6. PERCENTAGE");
+console.log("7. EXIT");
+var choice = prompt("Enter your choice");
+console.log(choice);
+switch (choice) {
+    case '1':
+        let val = prompt("Note: this is only for adding two numbers!! Enter the value:");
+           let val1 = prompt("Enter the other value:");
+           let res = +val + +val1;
+            console.log("The result is " +res);
+    case '2':
+        let val2 = prompt("Note: this is only for subtracting two numbers!! Enter the value:");
+        let val3 = prompt("Enter the other value:");
+        let resu = +val2 - +val3;
+        console.log("The result is " +resu);
+        break;
+    case  '3':
+        let val4 = prompt("Note: this is only for mutiplying two numbers!! Enter the value:");
+        let val5 = prompt("Enter the other value:");
+        let resul = +val4 * +val5;
+        console.log("The result is " +resul);
+        break;
+    case '4':
+        let valu = prompt("Note: this is only for dividing two numbers!! Enter the value:");
+        let value = prompt("Enter the other value:");
+        let result = +valu / +value;
+        console.log("The result is "  +result);
+        break;
+    case '5':
+        let val8 = prompt("Enter the value:");
+        let result1 = Math.sqrt(+val8);
+        console.log("The result is " +result1);
+       break;
+    case '6':
+            let val9 = prompt("Enter the value to convert:");
+            let val10 = prompt("Enter the value out of: ");
+            let reslt = (val9/val10)*100;
+            console.log("The result is " +reslt);
+            break;
+    default:
+        console.log("Exit!!");
+        break;
+}
+}while(choice<7);
+
+
+loop.js
+
+ for (let i = 0; i<= 100; i++ ){
+     if(i%3 == 0){
+         console.log("fizz");
+         if(i%5 == 0){
+             console.log("buzz");
+             console.log("fizzbuzz");
+         }
+     }
+     else if(i%5 == 0){
+         console.log("buzz");
+     }
+     else{
+         continue;
+     }
+ }
+ 
+ NO.js
+ 
+ var sa = prompt("Entert the number:");
+console.log(sa);
+for (let i = 0; i > -1; i++) {
+   let va = sa > 100 ? "yes" : "no";
+    if (va == 'yes') {
+        console.log("You have succesfully enteredd a number " +sa);
+        break;
+    }
+    else{
+        console.log("You have  entered a wrong value");
+        var sa = 0;
+        sa = prompt("Entert the number:");
+    }
+    
+}
+
+
+obj.js
+
+const student = {
+name: "Helsinki",
+age: 24,
+projects: {
+    dicegame: "Two player dice game using javascript"
+}
+}
+
+console.log(student.name);
+console.log(student.age);
+console.log(student.projects.dicegame);
+
+
+prime.js
+
+var n =  prompt("Enter the n value:");
+let num = 0;
+let cnt = 0;
+for (let i = 1; num< n; i++ )
+{
+   cnt = 0;
+    for( let j = 1; j< i; j++){
+        if(i%j == 0 ){
+            cnt = cnt +1;
+        }
+    }
+    if(cnt == 1){
+        console.log(i);
+        num = num +1;
+    }
+}
+
+
+sales.js
+
+var sales = prompt("Enter the amount: ");
+if( sales > 0 && sales<= 5000){
+    var s = (sales * 2)/100;
+     var a = sales * 5/100;
+    console.log("The reward is "+s);
+    console.log("The rewar earned by him "+a);
+}
+else if(sales > 5001 && sales <= 10000){
+    var sale = (sales * 5)/100;
+     var sa = sales * 12/100;
+    console.log("The reward is "+sale);
+    console.log("The rewar earned by him "+sa);
+}
+else if(sales > 10001 && sales <= 20000){
+    var sale = (sales * 7)/100;
+     var sa = sales * 14/100;
+    console.log("The reward is "+sale);
+    console.log("The rewar earned by him "+sa);
+}
+else if(sales > 20001 ){
+    var sales2 = (sales * 10)/100;
+     var sales3 = sales * 20/100;
+    console.log("The reward is "+sales2);
+    console.log("The rewar earned by him "+sales3);
+}
+else{
+}
+
+
+shopping.js
+
+let shoppingList = ['dal','rice','sugar','teapowder','oliveoil'];
+console.log(shoppingList);
+let shoppingbasket = shoppingList;
+shoppingbasket.push("chenna")
+shoppingbasket.push("coffee")
+console.log(shoppingbasket);
+
+
+
+ 
+ 
